@@ -1,0 +1,37 @@
+../gilbreth/fc_dirs/flowcharts//7.jpg
+../gilbreth/fc_dirs/flowcharts//8.jpg
+../gilbreth/fc_dirs/flowcharts//24.jpg
+../gilbreth/fc_dirs/flowcharts//25.jpg
+../gilbreth/fc_dirs/flowcharts//16.jpg
+../gilbreth/fc_dirs/flowcharts//17.jpg
+../gilbreth/fc_dirs/flowcharts//11.jpg
+../gilbreth/fc_dirs/flowcharts//12.jpg
+../gilbreth/fc_dirs/flowcharts//27.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_50.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_51.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_6.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_7.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_8.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_9.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_38.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_39.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_4.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_40.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_41.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_42.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_26.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_27.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_28.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_29.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_3.jpg
+../gilbreth/fc_dirs/flowcharts//handdrawn_30.jpg
+../gilbreth/fc_dirs/flowcharts//IMG-20200131-WA0017.jpg
+../gilbreth/fc_dirs/flowcharts//IMG-20200131-WA0018.jpg
+../gilbreth/fc_dirs/flowcharts//IMG-20200131-WA0019.jpg
+../gilbreth/fc_dirs/flowcharts//IMG-20200131-WA0021.jpg
+../gilbreth/fc_dirs/flowcharts//Flowcharts 1 to 4 (2).jpg
+../gilbreth/fc_dirs/flowcharts//Flowcharts 1 to 4 (4).jpg
+../gilbreth/fc_dirs/flowcharts//fc-4.png
+../gilbreth/fc_dirs/flowcharts//fc-8.png
+../gilbreth/fc_dirs/flowcharts//fc-10.png
+../gilbreth/fc_dirs/flowcharts//fc_hd_12 (1).jpg

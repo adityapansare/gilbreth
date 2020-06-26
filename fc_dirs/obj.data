@@ -1,0 +1,5 @@
+classes = 4
+train = /home/aaditya/gilbreth/fc_dirs/train.txt
+valid = /home/aaditya/gilbreth/fc_dirs/valid.txt
+names = /home/aaditya/gilbreth/fc_dirs/obj.names
+backup = /home/aaditya/gilbreth/fc_dirs/flowcharts/backup/
