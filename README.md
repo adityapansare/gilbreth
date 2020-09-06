@@ -41,3 +41,123 @@ For example-
 ```
 python gilbreth.py fc_dirs/flowcharts/Flowcharts\ 1\ to\ 4\ \(1\).jpg
 ```
+
+## Information about System Architecture
+
+This section provides information about the syntax expected by Gilbreth per the defaults defined by the authors.
+
+### Table 1: __Syntax for Shapes__
+
+|   Shape   	| Representation 	|
+|:---------:	|:--------------:	|
+|  Ellipse  	|   Start/Stop   	|
+| Rectangle 	|   Instruction  	|
+|  Diamond  	|    Condition   	|
+|  Hexagon  	|      Loops     	|
+
+<br>
+
+### Table 2: __Syntax for statements__
+
+|         Token        	|        Meaning        	|     Example     	    |
+|:--------------------:	|:---------------------:	|:---------------:	    |
+|          in          	|         input         	|  in: var1, var2 	    |
+|          out         	|         output        	| out: var1, var2 	    |
+|           =          	|  assignment operator  	|                 	    |
+|   +, -, *, /, _mod_  	| arithmetic operations 	|                 	    |
+|   >, <, ==, >=, <=   	|  comparison operators 	|     a _\<op>_ b    	|
+|        and, or       	|    binary operators   	|                 	    |
+| +=, -=, *=, /=, mod= 	|       shorthands      	|                 	    |
+|        ++, --        	|    unary shorthands   	|      a _\<op>_     	|
+
+<br>
+
+### Table 3: __Syntax for Loops__
+
+|  Type 	|                 Syntax                	    |         Example        	|
+|:-----:	|:-------------------------------------:	    |:----------------------:	|
+|  for  	| for \<init\>; \<condition\>; \<increment\>; 	| for i = 0; i < 10; i++ 	|
+| while 	|           while <condition>           	    |      while i == 0      	|
+
+<br><br>
+
+### Grammar for Generating the Parse tree
+
+Below is the default grammar used to generate the parse trees in our examples.  The  grammar must follow  the  standards  set by the LARK parser to be parsed completely. Note that users can set their own grammar as well and do not need to explicitly follow the below defaults.
+
+```
+expr : assign
+    | io
+    | for_loop
+    | while_loop
+    | bool
+    | cond
+    | "START"                   -> start
+    | "STOP"                    -> stop
+    | "start"                   -> start
+    | "stop"                    -> stop
+    | "Start"                   -> start
+    | "Stop"                    -> stop
+    | expr "."| [ expr ("," expr)+ ]
+    
+for_loop : "for" assign ";" cmp ";" assign
+    | "FOR" assign ";" cmp ";" assign
+
+while_loop : "while" cmp
+    | "WHILE" cmpcond: "if" cmp 
+    | "IF" cmpbool: "TRUE"                    -> true
+    | "true"                    -> true
+    | "True"                    -> true
+    | "FALSE"                   -> false
+    | "false"                   -> false
+    | "False"                   -> false
+
+cmp : arith cmpop arith | bool | [ cmp (conj cmp)+ ]
+
+conj : "or"                     -> or
+    | "and"                     -> and
+    
+assign : var assignop arith
+    | var shortassignop arith
+    | var incr_op
+
+!?arith : arith binop arith
+    | "(" arith ")"
+    | SIGNED_NUMBER             -> num
+    | var
+    
+io : iofunc ":" [ io_comp ("," io_comp)* ]
+
+?io_comp : ESCAPED_STRING       -> str
+    | var
+    | SIGNED_NUMBER             -> num
+
+cmpop : "<"                     -> lt
+    | ">"                       -> gt
+    | "=="                      -> eq
+    | ">="                      -> ge
+    | "<="                      -> le
+
+assignop : "="
+
+shortassignop : binop"="
+
+binop : "+"                     -> add
+    | "-"                       -> min
+    | "*"                       -> mul
+    | "/"                       -> div
+    | "%"                       -> mod
+
+incr_op : "++"                  -> add_incr
+    | "--"                      -> min_incr
+    
+var : CNAMEiofunc : "in"                   -> in
+    | "IN"                      -> in
+    | "OUT"                     -> out
+    | "out"                     -> out%import common.
+    
+%import common.SIGNED_NUMBER
+%import common.CNAME
+%import common.WS
+%ignore WS
+```
