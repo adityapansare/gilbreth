@@ -2,7 +2,7 @@
 
 ## Setup
 
-### Prerequisites
+### Prerequisite
 
 To run Gilbreth as intended, you will need the following:
 
@@ -158,7 +158,9 @@ binop : "+"                     -> add
 incr_op : "++"                  -> add_incr
     | "--"                      -> min_incr
     
-var : CNAMEiofunc : "in"                   -> in
+var : CNAME
+
+iofunc : "in"                   -> in
     | "IN"                      -> in
     | "OUT"                     -> out
     | "out"                     -> out%import common.
