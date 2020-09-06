@@ -1,6 +1,13 @@
 # Gilbreth
 
 ## Setup
+
+### Prerequisites
+
+To run Gilbreth as intended, you will need the following:
+
+> A machine running Ubuntu 18.04 OS, that can support CUDA >= 10.0.
+
 ### Install Darknet
 1. Clone AlexeyAB's darknet repository into the deep_learning directory such that the root of the darknet repository is in the deep_learning directory. Do this by running
 ```
